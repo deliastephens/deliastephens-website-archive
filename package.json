@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "description": "My portfolio website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deliastephens/portfolio.git"
+  },
+  "keywords": [
+    "website",
+    "portfolio"
+  ],
+  "author": "Delia Stephens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deliastephens/portfolio/issues"
+  },
+  "homepage": "https://github.com/deliastephens/portfolio#readme",
+  "dependencies": {
+    "bricks.js": "^1.8.0"
+  }
+}
