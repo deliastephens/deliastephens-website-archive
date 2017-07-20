@@ -1,6 +1,7 @@
 html {
   dislay: table;
   margin: auto;
+  font-family: 'PT Serif', serif;
 }
 
 .body {
@@ -46,6 +47,27 @@ html {
   height: auto;
   padding-top: 1vh;
 }
+
+/* wexas grid */
+.wexas-photos {
+  padding-top: 0;
+  width: 75%;
+  margin: auto;
+  line-height: 0;
+  -webkit-columns: 2 100px;
+  -webkit-column-gap:   3vh;
+  -moz-columns:    2 100px;
+  -moz-column-gap:      3vh;
+  columns:         2 100px;
+  column-gap:           3vh;
+}
+
+.wexas-photos img {
+  width: 100%;
+  height: auto;
+  padding-top: 1vh;
+}
+
 
 /* visual splash page */
 .projects {
