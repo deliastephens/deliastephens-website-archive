@@ -59,17 +59,12 @@ p.single {
   width: 100%;
 }
 
-.img-row img {
-  width: 75%;
+.extra-small-img {
+  width: 50%;
   text-align: center;
   margin: auto;
 }
 
-.img-col {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
 /* index.html grid */
 .photos {
   padding-top: 3%;
