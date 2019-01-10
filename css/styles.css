@@ -7,6 +7,7 @@ html {
 .body {
   margin: auto;
   width: 75%;
+  text-indent: 2em;
 }
 
 .avatar {
@@ -28,6 +29,16 @@ p.about {
   text-align: center;
 }
 
+p.heading {
+  text-indent: 0;
+  font-size: 20px;
+}
+p.single {
+  text-indent: 0;
+}
+
+
+
 /* project descriptions */
 .header-img {
   width: 100%;
@@ -38,7 +49,27 @@ p.about {
   width: 100%;
 }
 
+.small-img {
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}
 
+.small-img img {
+  width: 100%;
+}
+
+.img-row img {
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}
+
+.img-col {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
 /* index.html grid */
 .photos {
   padding-top: 3%;
