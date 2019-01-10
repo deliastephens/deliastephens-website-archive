@@ -17,9 +17,28 @@ html {
   margin: auto;
 }
 
+.poo {
+  width: 100%;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 1%;
+}
+
 p.about {
   text-align: center;
 }
+
+/* project descriptions */
+.header-img {
+  width: 100%;
+  text-align: center;
+}
+
+.header-img img {
+  width: 100%;
+}
+
+
 /* index.html grid */
 .photos {
   padding-top: 3%;
@@ -146,6 +165,7 @@ p.about {
   width: 100%;
   height: 100%;
 }
+
 /* page intro */
 .page-intro {
   width: 75%;
@@ -166,6 +186,7 @@ nav {
 
 .header {
   text-align: center;
+  padding-bottom: 3vh;
 }
 
 .header h1 a {
