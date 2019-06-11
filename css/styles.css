@@ -9,6 +9,10 @@ html {
   width: 75%;
 }
 
+.body img {
+  padding-left: 10pt;
+  padding-top: 10pt;
+}
 .avatar {
   vertical-align: middle;
   width: 250px;
@@ -31,11 +35,11 @@ p.about {
 p.heading {
   text-indent: 0;
   font-size: 20px;
+  text-decoration: underline;
 }
 p.single {
   text-indent: 0;
 }
-
 
 
 /* project descriptions */
