@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+
+    <title>delia stephens</title>
+    <meta name="description" content="delia stephens">
+    <meta name="author" content="Delia Stephens">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="header">
+      <h1 id="blog-title">
+        <a href="index.html">delia stephens</a>
+      </h1>
+      <div class="nav"
+        <ul id="nav-buttons">
+          <li><a href="visual.html">visual</a></li>
+          <li><a href="https://github.com/deliastephens">github</a></li>
+          <li><a href="aero.html">aero/astro</a></li>
+          <li><a href="projects.html">other</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="body">
+      <p class="heading">
+        Project Overview
+      </p>
+      <img class="inline" src="res/maja/materials.PNG" align="right" height="300px">
+      <p>
+        This summer, while working at
+        <a href="https://www.cicataqro.ipn.mx/cq/qro/Paginas/index.html">CICATA</a>,
+        I was tasked with desiging a flight program to train people on the
+        <a href="https://www.bormatec.com/produkte">Bormatec MAJA</a>, a long-range UAV designed to
+        hold large payloads for aerial surveillance. In addition to desiging checklists and flight logs,
+        I created a model of the drone for use in PhoenixRC, a now-defunct flight simulator that the program
+        had readily available.
+      </p>
+      <p>
+        While a more detailed description of the process I used is available in Gist format
+        <a href="https://gist.github.com/deliastephens/a7144b50509f97a37b59a5e540ffdf5c">here</a>,
+        below is a brief overview of what I accomplished over the course of a couple of weeks over the summer.
+        I went from only baseline modeling experience to relative proficiency, producing a model that is similar
+        in appearance and functionality to the Bormatec MAJA.
+      </p>
+      <p class="heading">
+        Modeling
+      </p>
+      <p>
+        The first thing I had to do was create the model of the MAJA. I opted to use a mixture of Solidworks and Blender,
+        both programs with which I was relatively unexperienced. I was successfully able to model the wings, propeller,
+        vertical & horizontal stabilizers, body, and their respective control surfaces in Solidworks; at this point, I put
+        my model into Blender to create meshes that PhoenixBuilder would understand.
+      </p>
+      <section class="atx-photos">
+        <a href="res/maja/assembly2.PNG"><img src="res/maja/assembly2.PNG" alt="img"/></a>
+        <a href="res/maja/wing1.PNG"><img src="res/maja/wing1.PNG" alt="skyline"/></a>
+        <a href="res/maja/body1.PNG"><img src="res/maja/body1.PNG" alt="img"/></a>
+        <a href="res/maja/hozstab1.PNG"><img src="res/maja/hozstab1.PNG" alt="img"/></a>
+        <a href="res/maja/propmotor1.PNG"><img src="res/maja/propmotor1.PNG" alt="img"/></a>
+      </section>
+      <p>
+        Perhaps unsurprisingly, I ran into lots of scaling issues, and I ended up with an untextured model in PhoenixBuilder,
+        but that actually works pretty well as the model is to be used for long-distance training, so the texture doesn't matter
+        too much.
+      </p>
+      <p class="heading">
+        Tuning & Flying in PhoenixRC
+      </p>
+      <p>
+        The next thing I had to do was get my model into PhoenixRC. PhoenixRC has
+        an additional tool called PhoenixBuilder, which allows you to import meshes of custom models and add common
+        characteristics like airfoils, control surfaces, powerplants, and collision meshes to the model. Because I'd
+        spent so much time getting the scale correct in Blender, this was a relatively
+        painless process, and I was able to get my completed model from Blender to Phoenix in a matter of hours.
+      </p>
+      <div class="small-img">
+        <a href="res/maja/phoenix_builder.png"><img src="res/maja/phoenix_builder.png" alt="img"/></a>
+      </div>
+      <p>
+        The rest of the battle came down to tuning; even though I had done a decent job scaling the aircraft,
+        I needed to fiddle with the center of gravity, trust provided by the motor, and lift the aircraft was generating.
+        At the end of this project, we ended up with a really fantastic training tool to get new pilots comfortable
+        with the dynamics of an airframe similar to what they'll actually be flying. I became more proficient in Solidworks, got to
+        see simulated instability, and was able to see a project through to completion.
+      </p>
+      <div class="small-img">
+        <a href="res/maja/phoenixRC.png"><img src="res/maja/phoenixRC.png" alt="img"/></a>
+      </div>
+    </div>
+  </body>
+</html>
