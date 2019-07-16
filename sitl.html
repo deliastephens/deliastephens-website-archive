@@ -49,9 +49,9 @@
         enabling rapid development and testing of UAV software.
       </p>
       <p>
-        However, current SITL simulations are typically run in the ideal environment, assuming
-        perfect connections to the UAV and all its equipment. Additionally, there is no good way
-        to test multiple missions in a row in varied environments to ensure a well-tested autopilot.
+        However, current SITL solutions do not allow for the rapid testing of multiple missions in succession.
+        Additionally, simulations are typically run in the ideal environment, assuming
+        perfect connections to the UAV and all its equipment.
         Developing further on the deprecated work by <a href="http://jaysonboubin.com/">Jayson Boubin</a>, I modified the
         <a href="https://github.com/boubinjg/FaultInjector">UAV FaultInjector</a> to load, modify, and reset
         MissionPlanner Waypoint files, run multiple missions, and perform robust UAV
@@ -69,15 +69,14 @@
       </p>
       <p>
         My first task was connecting the SITL physics simulator to a flight simulator for effective
-        mission visualization. This ended up being no small task, as much of the documentation was quite outdated.
-        For a more complete guide, please check out my Gist <a href="https://gist.github.com/deliastephens/6eb3fb3111f5d854bb240c7649847c1f">here</a>.
+        mission visualization. Because much of the documentation was outdated, I have written my own guide,
+        available <a href="https://gist.github.com/deliastephens/6eb3fb3111f5d854bb240c7649847c1f">here</a>.
       </p>
       <section class="atx-photos">
-        <a href="res/maja/assembly2.PNG"><img src="res/maja/assembly2.PNG" alt="img"/></a>
-        <a href="res/maja/wing1.PNG"><img src="res/maja/wing1.PNG" alt="skyline"/></a>
-        <a href="res/maja/body1.PNG"><img src="res/maja/body1.PNG" alt="img"/></a>
-        <a href="res/maja/hozstab1.PNG"><img src="res/maja/hozstab1.PNG" alt="img"/></a>
-        <a href="res/maja/propmotor1.PNG"><img src="res/maja/propmotor1.PNG" alt="img"/></a>
+        <a href="res/maja/assembly2.PNG"><img src="res/sitl/flying_mission.PNG" alt="img"/></a>
+        <a href="res/maja/wing1.PNG"><img src="res/sitl/mission_disarmed.PNG" alt="skyline"/></a>
+        <a href="res/maja/body1.PNG"><img src="res/sitl/mission_rtl.PNG" alt="img"/></a>
+        <a href="res/maja/hozstab1.PNG"><img src="res/sitl/flight_gif.gif" alt="img"/></a>
       </section>
       <p>
         I eventually ended up with a FlightGear visualization connected to my instance of JSBSim. It received
@@ -98,18 +97,17 @@
         <li>Interface with existing Ground Control systems</li>
       </ul>
       <div class="small-img">
-        <a href="res/maja/phoenix_builder.png"><img src="res/maja/phoenix_builder.png" alt="img"/></a>
+        <a href="https://github.com/deliastephens/FaultInjector"><img src="https://github.com/deliastephens/FaultInjector/blob/master/res/FaultInjector.PNG?raw=true" alt="img"/></a>
       </div>
       <p>
-        The rest of the battle came down to tuning; even though I had done a decent job scaling the aircraft,
-        I needed to fiddle with the center of gravity, thrust provided by the motor, and lift the aircraft was generating.
-        At the end of this project, we ended up with a really fantastic training tool to get new pilots comfortable
-        with the dynamics of an airframe similar to what they'll actually be flying. I became more proficient in Solidworks, got to
-        see simulated instability, and was able to see a project through to completion.
+        A build log is available over <a href="https://gist.github.com/deliastephens/fb2cfeb348b4ac89e1acd20d751836a9">here</a>,
+        but I was ultimately able to update the FaultInjector to reflect changes in Python and ArduPilot development,
+        add the functionality to load missions, start and stop SITL instances, and run multiple missions in succession.
+        With this tool, rapid development and testing of autopilots is made simple and practical.
       </p>
-      <div class="small-img">
-        <a href="res/maja/phoenixRC.png"><img src="res/maja/phoenixRC.png" alt="img"/></a>
-      </div>
+      <p>
+        For a more detailed user guide, please go to the <a href="https://github.com/deliastephens/FaultInjector">the FaultInjector GitHub page</a>.
+      </p>
     </div>
   </body>
 </html>
