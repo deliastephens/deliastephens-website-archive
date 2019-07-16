@@ -1,0 +1,115 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+
+
+    <title>delia stephens</title>
+    <meta name="description" content="delia stephens">
+    <meta name="author" content="Delia Stephens">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="header">
+      <h1 id="blog-title">
+        <a href="index.html">delia stephens</a>
+      </h1>
+      <div class="nav"
+        <ul id="nav-buttons">
+          <li><a href="visual.html">visual</a></li>
+          <li><a href="https://github.com/deliastephens">github</a></li>
+          <li><a href="aero.html">aero/astro</a></li>
+          <li><a href="projects.html">other</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="body">
+      <p class="heading">
+        Project Overview
+      </p>
+      <a href="https://github.com/deliastephens/FaultInjector">
+        <img class="inline" src="https://github.com/deliastephens/FaultInjector/blob/master/res/FaultInjector.PNG?raw=true" align="right" height="300px">
+      </a>
+      <p>
+        Testing UAVs in the field can be costly: not must you charge batteries, go through
+        checklists, prepare the drone, transport people and materials to the testing site, and
+        return everything to its place, there is the chance that the changes you have made will
+        fail. Software-in-the-loop (<a href="http://ardupilot.org/dev/docs/sitl-simulator-software-in-the-loop.html">SITL</a>)
+        simulation eliminates the need for physical tests
+        but maintains the integrity of the testing environment by linking a flight
+        dynamics model such as <a href="http://jsbsim.sourceforge.net/">JSBSim</a> to the autopilot,
+        enabling rapid development and testing of UAV software.
+      </p>
+      <p>
+        However, current SITL simulations are typically run in the ideal environment, assuming
+        perfect connections to the UAV and all its equipment. Additionally, there is no good way
+        to test multiple missions in a row in varied environments to ensure a well-tested autopilot.
+        Developing further on the deprecated work by <a href="http://jaysonboubin.com/">Jayson Boubin</a>, I modified the
+        <a href="https://github.com/boubinjg/FaultInjector">UAV FaultInjector</a> to load, modify, and reset
+        MissionPlanner Waypoint files, run multiple missions, and perform robust UAV
+        testing in concert with open-source flight dynamics simulators.
+      </p>
+      <p>
+        <a href="https://github.com/deliastephens/FaultInjector">Here</a> is my code for the FaultInjector,
+        <a href="https://gist.github.com/deliastephens/6eb3fb3111f5d854bb240c7649847c1f">here</a> is a more detailed
+        description of how to get SITL running,
+        and <a href="https://gist.github.com/deliastephens/fb2cfeb348b4ac89e1acd20d751836a9">here</a> are the personal
+        notes I kept while developing this project. Enjoy!
+      </p>
+      <p class="heading">
+        Setting up SITL
+      </p>
+      <p>
+        My first task was connecting the SITL physics simulator to a flight simulator for effective
+        mission visualization. This ended up being no small task, as much of the documentation was quite outdated.
+        For a more complete guide, please check out my Gist <a href="https://gist.github.com/deliastephens/6eb3fb3111f5d854bb240c7649847c1f">here</a>.
+      </p>
+      <section class="atx-photos">
+        <a href="res/maja/assembly2.PNG"><img src="res/maja/assembly2.PNG" alt="img"/></a>
+        <a href="res/maja/wing1.PNG"><img src="res/maja/wing1.PNG" alt="skyline"/></a>
+        <a href="res/maja/body1.PNG"><img src="res/maja/body1.PNG" alt="img"/></a>
+        <a href="res/maja/hozstab1.PNG"><img src="res/maja/hozstab1.PNG" alt="img"/></a>
+        <a href="res/maja/propmotor1.PNG"><img src="res/maja/propmotor1.PNG" alt="img"/></a>
+      </section>
+      <p>
+        I eventually ended up with a FlightGear visualization connected to my instance of JSBSim. It received
+        missions through MAVProxy and MissionPlanner. With this implementation, you can create missions, run them
+        in real-life locations, and see if the autopilot fails given certain conditions.
+      </p>
+      <p class="heading">
+        Fault Injection
+      </p>
+      <p>
+        Once I had SITL running on my computer, I decided to take the existing FaultInjector script and modify it to be able to:
+      </p>
+      <ul style="list-style-type:circle;">
+        <li>Load missions from a .txt file</li>
+        <li>Run a SITL simulation</li>
+        <li>Reset drone position after a completed mission</li>
+        <li>Run multiple missions in succession</li>
+        <li>Interface with existing Ground Control systems</li>
+      </ul>
+      <div class="small-img">
+        <a href="res/maja/phoenix_builder.png"><img src="res/maja/phoenix_builder.png" alt="img"/></a>
+      </div>
+      <p>
+        The rest of the battle came down to tuning; even though I had done a decent job scaling the aircraft,
+        I needed to fiddle with the center of gravity, thrust provided by the motor, and lift the aircraft was generating.
+        At the end of this project, we ended up with a really fantastic training tool to get new pilots comfortable
+        with the dynamics of an airframe similar to what they'll actually be flying. I became more proficient in Solidworks, got to
+        see simulated instability, and was able to see a project through to completion.
+      </p>
+      <div class="small-img">
+        <a href="res/maja/phoenixRC.png"><img src="res/maja/phoenixRC.png" alt="img"/></a>
+      </div>
+    </div>
+  </body>
+</html>
